@@ -1,0 +1,2121 @@
+{
+	"info": {
+		"_postman_id": "ac988e45-35e2-4779-9928-07b7a0988bc0",
+		"name": "JobHunter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admins",
+					"item": [
+						{
+							"name": "Get Me",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/get-me",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"get-me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"bek\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/create-admin",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"create-admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Me",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/update-me",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"update-me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update My Password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/update-my-password",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"update-my-password"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "Get All Categories",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/categories",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/categories/5b4062cc-432f-43cd-b51f-a95edfcb1b45",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"categories",
+										"5b4062cc-432f-43cd-b51f-a95edfcb1b45"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"flor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/categories",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"masha\",\r\n    \"is_deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/categories/debdcfa6-f527-4fc8-b9b5-6f447b8822c2",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"categories",
+										"debdcfa6-f527-4fc8-b9b5-6f447b8822c2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/categories/3",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"categories",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SONY/Desktop/My_Works/ecommerce/files/adidas.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/categories/image/5b4062cc-432f-43cd-b51f-a95edfcb1b45",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"categories",
+										"image",
+										"5b4062cc-432f-43cd-b51f-a95edfcb1b45"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/categories/image/5b4062cc-432f-43cd-b51f-a95edfcb1b45",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"categories",
+										"image",
+										"5b4062cc-432f-43cd-b51f-a95edfcb1b45"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Jobs",
+					"item": [
+						{
+							"name": "Get All Jobs",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/jobs",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"jobs"
+									],
+									"query": [
+										{
+											"key": "is_deleted",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Job",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/jobs/f32d07d4-8c15-4aa9-a697-322583d1990a",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"jobs",
+										"f32d07d4-8c15-4aa9-a697-322583d1990a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Job",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\":\"ish\",\r\n    \"name\": \"bla bla\",\r\n    \"schedule\": \"doly\",\r\n    \"price\": 1750,\r\n    \"location\": \"ashgabat\",\r\n    \"phone_number\": \"000000\",\r\n    \"category_uuid\": \"debdcfa6-f527-4fc8-b9b5-6f447b8822c2\",\r\n    \"user_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/jobs",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Job",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"is_deleted\": false,\r\n    \"name\": \"NANANANAn\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/jobs/b592880a-7fbb-4321-a052-13b921b97883",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"jobs",
+										"b592880a-7fbb-4321-a052-13b921b97883"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Job",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/jobs/f32d07d4-8c15-4aa9-a697-322583d1990a",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"jobs",
+										"f32d07d4-8c15-4aa9-a697-322583d1990a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Job Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SONY/Desktop/My_Works/ecommerce/files/download.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/jobs/image/b8ebb408-e944-4a5d-b0e7-078400964cf9",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"jobs",
+										"image",
+										"b8ebb408-e944-4a5d-b0e7-078400964cf9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Job Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/jobs/image/b8ebb408-e944-4a5d-b0e7-078400964cf9",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"jobs",
+										"image",
+										"b8ebb408-e944-4a5d-b0e7-078400964cf9"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Resumes",
+					"item": [
+						{
+							"name": "Get All Resumes",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/resumes",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"resumes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Resume",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/resumes/d1f55586-d8dc-4a5a-89c7-6c4527bf6b06",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"resumes",
+										"d1f55586-d8dc-4a5a-89c7-6c4527bf6b06"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Resume",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Bally\",\r\n    \"second_name\": \"Aliew\",\r\n    \"location\": \"Ashgabat\",\r\n    \"birth_date\": \"2000-02-07\",\r\n    \"phone_number\":69110011,\r\n    \"email\": \"ae@example.com\",\r\n    \"job_title\":\"prog\",\r\n    \"price\": 4000,\r\n    \"schedule\": \"full-time\",\r\n    \"experience\": 2,\r\n    \"education\": \"studying univer\",\r\n    \"node\": \"Very skilled\",\r\n    \"category_uuid\": \"debdcfa6-f527-4fc8-b9b5-6f447b8822c2\",\r\n    \"user_id\": 2,\r\n    \"eduandexper\":[\r\n        {\r\n            \"type\": \"education\",\r\n            \"organization\": \"IUHD\",\r\n            \"location\": \"Ashgabat\",\r\n            \"period\": {\r\n                \"start\": 2020,\r\n                \"finish\": 2025\r\n            }\r\n        },\r\n        {\r\n            \"type\": \"experience\",\r\n            \"organization\": \"Belli\",\r\n            \"location\": \"Ashgabat\",\r\n            \"period\": {\r\n                \"start\": 2021.01,\r\n                \"finish\": 2022.11\r\n            }\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/resumes",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"resumes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Resume",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Arslan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/resumes/c8159ce7-979e-475a-b37d-8ac5047186b8",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"resumes",
+										"c8159ce7-979e-475a-b37d-8ac5047186b8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Resume Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SONY/Desktop/My_Works/ecommerce/files/divhtybtltxjtyhhq2i5.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/resumes/image/31120471-bf85-4a3f-bd83-274574ee41a4",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"resumes",
+										"image",
+										"31120471-bf85-4a3f-bd83-274574ee41a4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Resume Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/resumes/image/31120471-bf85-4a3f-bd83-274574ee41a4",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"resumes",
+										"image",
+										"31120471-bf85-4a3f-bd83-274574ee41a4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Get All Users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/users/4bdbb416-545d-47b8-a4ad-6e4539e49181",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"users",
+										"4bdbb416-545d-47b8-a4ad-6e4539e49181"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admisnUser\",\r\n    \"password\": \"112255\",\r\n    \"phone_number\": \"61002211\",\r\n    \"email\": \"jobas@example.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"prosto@gmail.com\",\r\n    \"phone_number\": \"69988877\",\r\n    \"is_deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/users/5c9c243a-ba80-4d52-b6a1-5cd4c645c525",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"users",
+										"5c9c243a-ba80-4d52-b6a1-5cd4c645c525"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit User Password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/users/f32d07d4-8c15-4aa9-a697-322583d1990a",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"users",
+										"f32d07d4-8c15-4aa9-a697-322583d1990a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload User Photo",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SONY/Desktop/My_Works/ecommerce/files/kostyumGara1.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3010/api/admins/users/image/4bdbb416-545d-47b8-a4ad-6e4539e49181",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"users",
+										"image",
+										"4bdbb416-545d-47b8-a4ad-6e4539e49181"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User Photo",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtAdmin}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/admins/users/image/4bdbb416-545d-47b8-a4ad-6e4539e49181",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"admins",
+										"users",
+										"image",
+										"4bdbb416-545d-47b8-a4ad-6e4539e49181"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sign Up",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwtAdmin\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"adilbek\",\r\n    \"password\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3010/api/admins/sign-up",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"admins",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwtAdmin\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"adilbek\",\r\n    \"password\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3010/api/admins/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"admins",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Public",
+			"item": [
+				{
+					"name": "Get All Jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3010/api/public/jobs",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"public",
+								"jobs"
+							],
+							"query": [
+								{
+									"key": "schedule",
+									"value": "doly",
+									"disabled": true
+								},
+								{
+									"key": "price[]",
+									"value": ">1800",
+									"disabled": true
+								},
+								{
+									"key": "price[]",
+									"value": "<2000",
+									"disabled": true
+								},
+								{
+									"key": "sort_by",
+									"value": "name",
+									"disabled": true
+								},
+								{
+									"key": "as",
+									"value": "ASC",
+									"disabled": true
+								},
+								{
+									"key": "experience[]",
+									"value": ">1",
+									"disabled": true
+								},
+								{
+									"key": "experience[]",
+									"value": "<3",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "do",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3010/api/public/jobs/b8ebb408-e944-4a5d-b0e7-078400964cf9",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"public",
+								"jobs",
+								"b8ebb408-e944-4a5d-b0e7-078400964cf9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3010/api/public/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"public",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "rur",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3010/api/public/categories/5b4062cc-432f-43cd-b51f-a95edfcb1b45",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"public",
+								"categories",
+								"5b4062cc-432f-43cd-b51f-a95edfcb1b45"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Resumes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3010/api/public/resumes?keyword=pro",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"public",
+								"resumes"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "pro"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resume",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3010/api/public/resumes/ff1c81af-f297-44bd-b177-2f0855de00cb",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"public",
+								"resumes",
+								"ff1c81af-f297-44bd-b177-2f0855de00cb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3010/api/public/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"public",
+								"users"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "bo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3010/api/public/users/4bdbb416-545d-47b8-a4ad-6e4539e49181",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"public",
+								"users",
+								"4bdbb416-545d-47b8-a4ad-6e4539e49181"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Get Me",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/users/get-me",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"get-me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Me",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"phone_number\": \"132456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/users/update-me",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"update-me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update My Password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"112233\",\r\n    \"newPassword\": \"123123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/users/update-my-password",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"update-my-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Me",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/users/delete-me",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"delete-me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SONY/Desktop/My_Works/face/1/adilbek_123/adilbek_0.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3010/api/users/upload-my-image",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"upload-my-image"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/users/delete-my-image",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"delete-my-image"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Jobs",
+					"item": [
+						{
+							"name": "Add Job",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\":\"ishchi\",\r\n    \"name\": \"dom\",\r\n    \"schedule\": \"doly\",\r\n    \"location\": \"ashgabat\",\r\n    \"price\": 1750,\r\n    \"phone_number\": \"000000\",\r\n    \"category_uuid\": \"debdcfa6-f527-4fc8-b9b5-6f447b8822c2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/users/jobs",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Job",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"price\": 1500,\r\n    \"is_deleted\": true,\r\n    \"education\": \"orta\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/users/jobs/b592880a-7fbb-4321-a052-13b921b97883",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"jobs",
+										"b592880a-7fbb-4321-a052-13b921b97883"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Job",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/users/jobs/5",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"jobs",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Job Photo",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SONY/Desktop/My_Works/ecommerce/files/fruit.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3010/api/users/jobs/image/a59458b5-fe20-4f27-a5c8-0b7be7a32c71",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"jobs",
+										"image",
+										"a59458b5-fe20-4f27-a5c8-0b7be7a32c71"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Job Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/users/jobs/image/a59458b5-fe20-4f27-a5c8-0b7be7a32c71",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"jobs",
+										"image",
+										"a59458b5-fe20-4f27-a5c8-0b7be7a32c71"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Resumes",
+					"item": [
+						{
+							"name": "Add Resume",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Job\",\r\n    \"second_name\": \"Jax\",\r\n    \"location\": \"Ashgabat\",\r\n    \"birth_date\": \"2000-02-07\",\r\n    \"phone_number\":69110011,\r\n    \"email\": \"ae@example.com\",\r\n    \"job_title\":\"prog\",\r\n    \"price\": 4000,\r\n    \"schedule\": \"full-time\",\r\n    \"experience\": 2,\r\n    \"education\": \"studying univer\",\r\n    \"node\": \"Very skilled\",\r\n    \"category_uuid\": \"debdcfa6-f527-4fc8-b9b5-6f447b8822c2\",\r\n    \"eduandexper\":[\r\n        {\r\n            \"type\": \"education\",\r\n            \"organization\": \"IUHD\",\r\n            \"location\": \"Ashgabat\",\r\n            \"period\": {\r\n                \"start\": 2020,\r\n                \"finish\": 2025\r\n            }\r\n        },\r\n        {\r\n            \"type\": \"experience\",\r\n            \"organization\": \"Belli\",\r\n            \"location\": \"Ashgabat\",\r\n            \"period\": {\r\n                \"start\": 2021.01,\r\n                \"finish\": 2022.11\r\n            }\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/users/resumes",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"resumes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Resume",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eduandexper\": [\r\n        {\r\n            \"delete\":[\"e1b26485-49c5-43dd-a488-efd401226be5\"]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3010/api/users/resumes/ff1c81af-f297-44bd-b177-2f0855de00cb",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"resumes",
+										"ff1c81af-f297-44bd-b177-2f0855de00cb"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Resume",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/users/resumes/bf985b53-b932-4ce6-830e-5e0f2aeb15af",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"resumes",
+										"bf985b53-b932-4ce6-830e-5e0f2aeb15af"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Resume Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SONY/Desktop/My_Works/ecommerce/files/baby - Copy.jpeg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:3010/api/users/resumes/image/31120471-bf85-4a3f-bd83-274574ee41a4",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"resumes",
+										"image",
+										"31120471-bf85-4a3f-bd83-274574ee41a4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Resume Image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtUser}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3010/api/users/resumes/image/31120471-bf85-4a3f-bd83-274574ee41a4",
+									"host": [
+										"localhost"
+									],
+									"port": "3010",
+									"path": [
+										"api",
+										"users",
+										"resumes",
+										"image",
+										"31120471-bf85-4a3f-bd83-274574ee41a4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sign up",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwtUser\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"job\",\r\n    \"password\": \"123123\",\r\n    \"phone_number\": \"01000001\",\r\n    \"email\": \"job@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3010/api/users/sign-up",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"users",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"jwtUser\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"bob\",\r\n    \"password\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3010/api/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
