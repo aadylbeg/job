@@ -3,7 +3,6 @@ const { signup, login, protect } = require("../../controllers/admin/auth");
 const admin = require("./../../controllers/admin/adminControllers");
 const router = express.Router();
 
-router.post("/sign-up", signup);
 router.post("/login", login);
 
 router.use(protect);

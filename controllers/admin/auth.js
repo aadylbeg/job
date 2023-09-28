@@ -23,20 +23,6 @@ exports.protect = catchAsync(async (req, res, next) => {
   next();
 });
 
-exports.signup = catchAsync(async (req, res, next) => {
-  var { username, password } = req.body;
-
-  var ins = "INSERT INTO admins (uuid, username, password) VALUES ($1, $2, $3)";
-
-  password = await bcrypt.hash(password, 12);
-  await pool.query(ins, [v4(), username, password]);
-
-  const newSelect = "SELECT id, username from admins where username = $1";
-  const newAdmin = await pool.query(newSelect, [username]);
-
-  createSendToken("admin", newAdmin.rows[0], 200, res);
-});
-
 exports.login = catchAsync(async (req, res, next) => {
   const { username, password } = req.body;
   const select = "SELECT * from admins where username = $1";
