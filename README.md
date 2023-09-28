@@ -14,6 +14,10 @@ create `.env` file in root with following contents:
     PASSWORD = < database_password >
 ```
 
+run command `node .\utils\seeders.js` to seed admin into database
+
 run command `npm start` to start the project
 
 all you needed apis in the `./public/JobHunter.postman_collection.json` file
+
+You can login as admin with username 'admin' and password 'admin'
