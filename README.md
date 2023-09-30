@@ -12,6 +12,9 @@ create `.env` file in root with following contents:
     HOST = < database_host >
     DATABASE = < database_name >
     PASSWORD = < database_password >
+
+    GOOGLE_CLIENT_ID = < your_client_id >
+    GOOGLE_CLIENT_SECRET = < your_secret >
 ```
 
 run command `node .\utils\seeders.js` to seed admin into database

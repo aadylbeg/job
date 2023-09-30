@@ -1,15 +1,13 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-const AppError = require("../../utils/appError");
 const { pool } = require("./../../utils/dbTables");
 const { v4 } = require("uuid");
 
 passport.use(
   new GoogleStrategy(
     {
-      clientID:
-        "91391899648-10c2eons4ihg16a2oe6jn5u33ejd21s8.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientID: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL: `/google/callback`,
       // passReqToCallBack: true
     },
